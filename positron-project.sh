@@ -10,7 +10,7 @@
 # @raycast.icon 🛝
 
 # Documentation:
-# @raycast.description Create ~/Development/• Mini projects/• 2025 playground/MM/DD/<folder> and open in Positron
+# @raycast.description Create ~/Development/• Mini projects/• Playground/YYYY/MM/DD/<folder> and open in Positron
 # @raycast.author andrewheiss
 
 # Check if folder name is provided
@@ -19,14 +19,14 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-# Get the current date in MM/DD format
-current_date=$(date +%m/%d)
+# Get the current date in YYYY/MM/DD format
+current_date=$(date +%Y/%m/%d)
 
 # And get it as ISO-8601 for the YAML
 yaml_date=$(date +%Y-%m-%d)
 
 # Build the full path
-full_path="$HOME/Development/• Mini projects/• 2025 playground/$current_date/$1"
+full_path="$HOME/Development/• Mini projects/• Playground/$current_date/$1"
 
 # Create the directory
 mkdir -p "$full_path"
