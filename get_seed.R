@@ -1,4 +1,4 @@
-#! /usr/bin/env RScript
+#!/usr/bin/env Rscript
 
 # Required parameters:
 # @raycast.schemaVersion 1
@@ -17,7 +17,7 @@
 library(httr2)
 
 seed <- request(
-  "https://www.random.org/integers/?num=1&min=100000&max=999999&col=1&base=10&format=plain&rnd=new"
+  "https://www.random.org/integers/?num=1&min=100000&max=999999999&col=1&base=10&format=plain&rnd=new"
 ) |>
   req_method("GET") |>
   req_perform() |>
